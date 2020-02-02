@@ -74,9 +74,6 @@ public class CostConverter {
     static void ConvertDollarsToAud() {
         Scanner in = new Scanner(System.in);
         
-        //Vars for rounding up to nearest dollar otherwise numbers are off
-        double roundedTc, roundedHc, roundedRc, roundedLc;
-        
         //Convert USD values to AUD
         travelCost = travelCost * 1.48271;
         hotelCost = hotelCost * 1.48271;
@@ -84,17 +81,17 @@ public class CostConverter {
         laborCost = laborCost * 1.48271;
         
         //Round up the computed numbers to the nearest dollar
-        roundedTc = Math.round(travelCost * 100.0) / 100.0;
-        roundedHc = Math.round(hotelCost * 100.0) / 100.0;
-        roundedRc = Math.round(rentalCarCost * 100.0) / 100.0;
-        roundedLc = Math.round(laborCost * 100.0) / 100.0;
+        travelCost = Math.round(travelCost * 100.0) / 100.0;
+        hotelCost = Math.round(hotelCost * 100.0) / 100.0;
+        rentalCarCost = Math.round(rentalCarCost * 100.0) / 100.0;
+        laborCost = Math.round(laborCost * 100.0) / 100.0;
 
         //Output the AUD values using two decimal places in the String.format
         System.out.println("\nCosts Converted to AUD From USD, Current AUD Rate is 1.48271 Per Dollar\n");
-        System.out.println("Travel Cost Converted To AUD is: " + String.format("%.2f", roundedTc) + "\n"
-                + "Hotel Cost Converted To AUD is: " + String.format("%.2f", roundedHc) + "\n"
-                + "Rental Car Cost Converted To AUD is: " + String.format("%.2f", roundedRc) + "\n"
-                + "Labor Cost Converted To AUD is: " + String.format("%.2f", roundedLc) + "\n");
+        System.out.println("Travel Cost Converted To AUD is: " + String.format("%.2f", travelCost) + "\n"
+                + "Hotel Cost Converted To AUD is: " + String.format("%.2f", hotelCost) + "\n"
+                + "Rental Car Cost Converted To AUD is: " + String.format("%.2f", rentalCarCost) + "\n"
+                + "Labor Cost Converted To AUD is: " + String.format("%.2f", laborCost) + "\n");
 
         //Do a while loop to repeat the process until the user enters 'n'
         while (choice != 'N') {
