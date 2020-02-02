@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CostConverter {
 
-    static double travelCost, hotelCost, rentalCarCost, laborCost, tcConvertedToAud, hcConvertedToAud, rcCostConvertedToAud, lcConvertedToAud;
+    static double travelCost, hotelCost, rentalCarCost, laborCost;
     static char choice;
 
     public static void main(String[] args) {
@@ -13,7 +13,8 @@ public class CostConverter {
 
     static void GetCosts() {
         Scanner in = new Scanner(System.in);
-
+        
+        /* Use nested while loops to catch any invalid numbers or negative values */
         while (true) {
             System.out.println("Enter Travel Cost in US Dollars without the $:");
             try {
@@ -77,16 +78,16 @@ public class CostConverter {
         double roundedTc, roundedHc, roundedRc, roundedLc;
         
         //Convert USD values to AUD
-        tcConvertedToAud = travelCost * 1.48271;
-        hcConvertedToAud = hotelCost * 1.48271;
-        rcCostConvertedToAud = rentalCarCost * 1.48271;
-        lcConvertedToAud = laborCost * 1.48271;
+        travelCost = travelCost * 1.48271;
+        hotelCost = hotelCost * 1.48271;
+        rentalCarCost = rentalCarCost * 1.48271;
+        laborCost = laborCost * 1.48271;
         
         //Round up the computed numbers to the nearest dollar
-        roundedTc = Math.round(tcConvertedToAud * 100.0) / 100.0;
-        roundedHc = Math.round(hcConvertedToAud * 100.0) / 100.0;
-        roundedRc = Math.round(rcCostConvertedToAud * 100.0) / 100.0;
-        roundedLc = Math.round(lcConvertedToAud * 100.0) / 100.0;
+        roundedTc = Math.round(travelCost * 100.0) / 100.0;
+        roundedHc = Math.round(hotelCost * 100.0) / 100.0;
+        roundedRc = Math.round(rentalCarCost * 100.0) / 100.0;
+        roundedLc = Math.round(laborCost * 100.0) / 100.0;
 
         //Output the AUD values using two decimal places in the String.format
         System.out.println("\nCosts Converted to AUD From USD, Current AUD Rate is 1.48271 Per Dollar\n");
