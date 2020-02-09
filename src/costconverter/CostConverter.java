@@ -25,7 +25,7 @@ public class CostConverter {
                 }
                 break;
             } catch (NumberFormatException ignore) {
-                System.out.println("Invalid Input ... must contain positive numbers only!");
+                System.out.println("Invalid Input ... must contain positive numbers only!  No special characters are needed!");
             }
         }
         while (true) {
@@ -38,7 +38,7 @@ public class CostConverter {
                 }
                 break;
             } catch (NumberFormatException ignore) {
-                System.out.println("Invalid Input ... must contain positive numbers only!");
+                System.out.println("Invalid Input ... must contain positive numbers only!  No special characters are needed!");
             }
         }
         while (true) {
@@ -51,7 +51,7 @@ public class CostConverter {
                 }
                 break;
             } catch (NumberFormatException ignore) {
-                System.out.println("Invalid Input ... must contain positive numbers only!");
+                System.out.println("Invalid Input ... must contain positive numbers only!  No special characters are needed!");
             }
         }
         while (true) {
@@ -64,7 +64,7 @@ public class CostConverter {
                 }
                 break;
             } catch (NumberFormatException ignore) {
-                System.out.println("Invalid Input ... must contain positive numbers only!");
+                System.out.println("Invalid Input ... must contain positive numbers only!  No special characters are needed!");
             }
         }
         //Now that the values are correctly collected call the ConvertDollarsToAud() function
