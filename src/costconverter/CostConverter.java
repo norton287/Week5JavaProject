@@ -75,10 +75,10 @@ public class CostConverter {
         Scanner in = new Scanner(System.in);
         
         //Convert USD values to AUD
-        travelCost = travelCost * 1.48426;
-        hotelCost = hotelCost * 1.48426;
-        rentalCarCost = rentalCarCost * 1.48426;
-        laborCost = laborCost * 1.48426;
+        travelCost = travelCost * 1.49857;
+        hotelCost = hotelCost * 1.49857;
+        rentalCarCost = rentalCarCost * 1.49857;
+        laborCost = laborCost * 1.49857;
         
         //Round up the computed numbers to the nearest dollar
         travelCost = Math.round(travelCost * 100.0) / 100.0;
@@ -87,7 +87,7 @@ public class CostConverter {
         laborCost = Math.round(laborCost * 100.0) / 100.0;
 
         //Output the AUD values using two decimal places in the String.format
-        System.out.println("\nCosts Converted to AUD From USD, Current AUD Rate is 1.48426 Per Dollar\n");
+        System.out.println("\nCosts Converted to AUD From USD, Current AUD Rate is 1.49857 Per Dollar\n");
         System.out.println("Travel Cost Converted To AUD is: " + String.format("%.2f", travelCost) + "\n"
                 + "Hotel Cost Converted To AUD is: " + String.format("%.2f", hotelCost) + "\n"
                 + "Rental Car Cost Converted To AUD is: " + String.format("%.2f", rentalCarCost) + "\n"
